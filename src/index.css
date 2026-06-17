@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+/* ─── Font Faces ──────────────────────────────────────────────
+   Fraunces  → títulos (serif quente, moderna, com warmth orgânico)
+   Archivo   → corpo (sans humanista, limpa)
+   Ambas são variable fonts, auto-hospedadas (funcionam offline). */
+@font-face {
+  font-family: 'Fraunces';
+  src: url('../assets/fonts/Fraunces/Fraunces.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('../assets/fonts/Archivo/Archivo-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Design Tokens — Tema "Terra & Semente" ──────────────────
+   Conceito: plantar e colher na obra de Deus. Tons de terra,
+   folha e barro — caloroso, orgânico, acolhedor e sofisticado. */
+@theme {
+  /* Fundos / superfícies */
+  --color-terra-bg: #f7f2e9;        /* creme osso — fundo principal */
+  --color-terra-cream: #efe6d5;     /* creme mais fechado — seções alternadas */
+  --color-terra-surface: #ffffff;   /* branco — cards */
+
+  /* Verde-folha (acento primário — crescimento, vida) */
+  --color-terra-green-900: #1e3d27; /* mais escuro */
+  --color-terra-green-700: #2f5d3a; /* primário */
+  --color-terra-green-500: #4f7e58;
+  --color-terra-green-300: #8fae90;
+
+  /* Terracota / barro (acento quente — terra, semente, colheita) */
+  --color-terra-clay-700: #a8542f;
+  --color-terra-clay-500: #c0683f; /* secundário */
+  --color-terra-clay-300: #d98b63;
+
+  /* Dourado de colheita (destaque sutil — luz, trigo) */
+  --color-terra-gold: #c9a24b;
+
+  /* Texto / neutros */
+  --color-terra-ink: #2a241b;       /* espresso — texto principal */
+  --color-terra-bark: #4a4031;      /* texto secundário */
+  --color-terra-muted: #7c7363;     /* bege acinzentado — legendas */
+  --color-terra-line: #ddd2bd;      /* linhas / bordas suaves */
+
+  /* Tipografia */
+  --font-heading: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Archivo', system-ui, sans-serif;
+}
+
+/* ─── Base Reset ──────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f7f2e9;
+  color: #2a241b;
+  font-family: 'Archivo', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(47, 93, 58, 0.18);
+  color: #1e3d27;
+}
+
+/* ─── Grain overlay reutilizável (light mode → multiply) ──────
+   No tema escuro do eximia o grão usa "overlay"; no claro usamos
+   "multiply" com grão escuro de baixíssima opacidade. */
+.grain-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  mix-blend-mode: multiply;
+}
+
+/* ─── Scroll indicator pulse ──────────────────────────────── */
+@keyframes scrollPulse {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  20%  { opacity: 1; }
+  80%  { opacity: 1; }
+  100% { transform: translateY(250%); opacity: 0; }
+}
+
+.scroll-pulse {
+  animation: scrollPulse 2.2s ease-in-out infinite;
+}
+
+/* ─── Brilho lento de fundo (luz de sol filtrada) ─────────── */
+@keyframes sunDrift {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.55; }
+  50%      { transform: translate(3%, -2%) scale(1.06); opacity: 0.8; }
+}
+
+.sun-drift {
+  animation: sunDrift 14s ease-in-out infinite;
+}
