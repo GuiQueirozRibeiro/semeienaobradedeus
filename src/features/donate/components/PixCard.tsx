@@ -130,12 +130,3 @@ function formatCNPJ(value: string): string {
   if (d.length !== 14) return value
   return d.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, '$1.$2.$3/$4-$5')
 }
-
-function PixGlyph() {
-  return (
-    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path d="M12 2.5l3.4 3.4a3 3 0 010 4.2L12 13.5 8.6 10.1a3 3 0 010-4.2L12 2.5z" fill="#2f5d3a" opacity="0.25" />
-      <path d="M5.8 8.3l2.8 2.8a3 3 0 004.8 0M18.2 8.3l-2.8 2.8M12 13.5l3.4 3.4a3 3 0 004.2 0M12 13.5l-3.4 3.4a3 3 0 01-4.2 0" stroke="#2f5d3a" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  )
-}
