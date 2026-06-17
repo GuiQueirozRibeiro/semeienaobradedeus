@@ -34,8 +34,9 @@ export default function PixCard() {
 
   return (
     <div
+      id="pix"
       className="donate-reveal rounded-3xl p-8 md:p-10 mx-auto w-full"
-      style={{ maxWidth: 460, background: '#fffdf8', boxShadow: '0 24px 60px rgba(0,0,0,0.28)' }}
+      style={{ maxWidth: 460, scrollMarginTop: 100, background: '#fffdf8', boxShadow: '0 24px 60px rgba(0,0,0,0.28)' }}
     >
       {/* header */}
       <div className="flex items-center gap-3">

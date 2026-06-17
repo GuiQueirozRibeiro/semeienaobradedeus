@@ -70,8 +70,8 @@ export default function ProgressSection() {
         {/* ── CTA ───────────────────────────────────────────── */}
         <div className="obra-reveal text-center mt-14">
           <a
-            href="#doar"
-            onClick={e => { e.preventDefault(); document.getElementById('doar')?.scrollIntoView({ behavior: 'smooth' }) }}
+            href="#pix"
+            onClick={e => { e.preventDefault(); document.getElementById('pix')?.scrollIntoView({ behavior: 'smooth' }) }}
             className="font-body inline-flex items-center justify-center"
             style={{
               fontSize: '13px', letterSpacing: '0.06em', fontWeight: 600, color: '#fff',

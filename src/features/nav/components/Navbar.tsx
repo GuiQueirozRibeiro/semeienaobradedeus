@@ -200,11 +200,11 @@ function DesktopLink({ href, label }: { href: string; label: string }) {
 function CTAButton() {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
-    document.getElementById('doar')?.scrollIntoView({ behavior: 'smooth' })
+    document.getElementById('pix')?.scrollIntoView({ behavior: 'smooth' })
   }
   return (
     <a
-      href="#doar"
+      href="#pix"
       onClick={handleClick}
       className="hidden md:inline-flex items-center font-body"
       style={{
@@ -327,8 +327,8 @@ function MobileMenu({
         }}
       >
         <a
-          href="#doar"
-          onClick={e => { e.preventDefault(); scrollTo('#doar') }}
+          href="#pix"
+          onClick={e => { e.preventDefault(); scrollTo('#pix') }}
           className="font-body block text-center"
           style={{
             fontSize: '13px',

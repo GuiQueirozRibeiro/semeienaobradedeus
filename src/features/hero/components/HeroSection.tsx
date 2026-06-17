@@ -117,8 +117,8 @@ export default function HeroSection() {
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-11">
           <a
-            href="#doar"
-            onClick={scrollTo('doar')}
+            href="#pix"
+            onClick={scrollTo('pix')}
             className="hero-cta font-body inline-flex items-center justify-center"
             style={{
               opacity: 0, fontSize: '13px', letterSpacing: '0.06em', fontWeight: 600, color: '#fff',
