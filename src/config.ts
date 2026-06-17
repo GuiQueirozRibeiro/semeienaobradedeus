@@ -38,7 +38,7 @@ export const SITE = {
     // WhatsApp no formato internacional só com dígitos: 55 + DDD + número
     whatsapp: '5561993709963', // ⚠️ PREENCHER
     instagram: 'https://www.instagram.com/ibgn_sad/', // ⚠️ PREENCHER
-    email: 'semeienaobradedeus@ig.com.br', // ⚠️ PREENCHER
+    email: 'semeieaobradedeus@ig.com.br', // ⚠️ PREENCHER
   },
 } as const
 
