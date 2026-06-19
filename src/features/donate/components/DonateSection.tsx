@@ -49,7 +49,7 @@ export default function DonateSection() {
 
         {/* ── Heading ───────────────────────────────────────── */}
         <p className="donate-reveal font-body text-center" style={{ fontSize: '12px', letterSpacing: '0.34em', color: '#e0b65c', fontWeight: 600 }}>
-          03 · SEMEIE
+          05 · SEMEIE
         </p>
         <h2 className="donate-reveal font-heading text-center m-0 mt-5" style={{ fontSize: 'clamp(2.3rem, 5.5vw, 4rem)', lineHeight: 1.04, letterSpacing: '-0.02em', color: '#f7f2e9', fontWeight: 400 }}>
           Doe aquilo que <span className="italic" style={{ color: '#e8c879' }}>Deus tocar no seu coração</span>

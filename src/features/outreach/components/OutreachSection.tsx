@@ -6,13 +6,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-/**
- * Fotos ilustrativas de licença livre (Pexels). Substitua por fotos reais das
- * ações da igreja colocando os arquivos em /public com os mesmos nomes.
- */
+/** Destaques reais da igreja — uma frente de cada ministério. */
 const PHOTOS = [
-  { src: '/caridade-alimentos.jpg', cap: 'Levar alimento e esperança a quem precisa' },
-  { src: '/caridade-cesta.jpg', cap: 'Mãos que se unem para servir o próximo' },
+  { src: '/criancas-escola2.jpeg', cap: 'A escola bíblica das crianças' },
+  { src: '/evangelismo-rua4.jpeg', cap: 'Amor que acolhe nas ruas' },
+  { src: '/evangelismo-hospital.jpeg', cap: 'Equipe de Missões em ação' },
 ]
 
 export default function OutreachSection() {
@@ -51,7 +49,7 @@ export default function OutreachSection() {
           nossa capacidade de acolher, alimentar e abraçar a comunidade e as nações.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-6 md:gap-7 mt-14">
+        <div className="grid sm:grid-cols-3 gap-6 md:gap-7 mt-14">
           {PHOTOS.map(p => (
             <figure key={p.src} className="outreach-photo m-0">
               <div className="rounded-2xl overflow-hidden" style={{ border: '1px solid #ddd2bd', boxShadow: '0 18px 44px rgba(42,36,27,0.12)' }}>
@@ -59,7 +57,7 @@ export default function OutreachSection() {
                   src={p.src}
                   alt={p.cap}
                   loading="lazy"
-                  style={{ display: 'block', width: '100%', aspectRatio: '3 / 2', objectFit: 'cover' }}
+                  style={{ display: 'block', width: '100%', aspectRatio: '4 / 5', objectFit: 'cover' }}
                 />
               </div>
               <figcaption className="font-body text-center mt-3" style={{ fontSize: '13px', color: '#7c7363', letterSpacing: '0.02em' }}>
