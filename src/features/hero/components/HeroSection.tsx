@@ -90,6 +90,12 @@ export default function HeroSection() {
 
         <h1 className="font-heading m-0 mt-5" style={{ lineHeight: 0.98, letterSpacing: '-0.02em' }}>
           <span
+            className="hero-title-line block italic"
+            style={{ opacity: 0, fontSize: 'clamp(1.4rem, 4vw, 2.4rem)', fontWeight: 400, lineHeight: 1.1, color: '#a8542f', marginBottom: '0.2em' }}
+          >
+            Campanha
+          </span>
+          <span
             className="hero-title-line block"
             style={{ opacity: 0, fontSize: 'clamp(3rem, 9vw, 6.5rem)', fontWeight: 400, color: '#2a241b' }}
           >
